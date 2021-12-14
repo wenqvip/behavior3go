@@ -1,9 +1,9 @@
 package decorators
 
 import (
-	b3 "github.com/magicsea/behavior3go"
-	. "github.com/magicsea/behavior3go/config"
-	. "github.com/magicsea/behavior3go/core"
+	b3 "github.com/wenqvip/behavior3go"
+	. "github.com/wenqvip/behavior3go/config"
+	. "github.com/wenqvip/behavior3go/core"
 )
 
 /**
@@ -36,9 +36,6 @@ type RepeatUntilSuccess struct {
 func (this *RepeatUntilSuccess) Initialize(setting *BTNodeCfg) {
 	this.Decorator.Initialize(setting)
 	this.maxLoop = setting.GetPropertyAsInt("maxLoop")
-	if this.maxLoop < 1 {
-		panic("maxLoop parameter in MaxTime decorator is an obligatory parameter")
-	}
 }
 
 /**
