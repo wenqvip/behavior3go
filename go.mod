@@ -1,3 +1,3 @@
 module github.com/wenqvip/behavior3go
 
-go 1.15
+go 1.19
